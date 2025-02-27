@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+    <!-- 이 권한은 애플리케이션이 네트워크를 통해 외부 서버에 클라이언트로서 접근할 수 있도록 허용합니다. -->
+    <key>com.apple.security.network.client</key>
+    <true/>
+
+    <!-- 사용자가 선택한 파일에 대해 읽기 및 쓰기 권한을 부여합니다. 이는 파일 대화 상자를 통해 사용자가 직접 선택한 파일에 적용됩니다. -->
+    <key>com.apple.security.files.user-selected.read-write</key>
+    <true/>
+
+    <!-- 샌드박스 환경에서 실행되는 애플리케이션은 제한된 리소스와 사용자 데이터에만 접근할 수 있으며, 이러한 접근은 사용자의 명시적인 허가나 시스템의 보안 정책에 따라 결정됩니다. -->
+   <!-- <key>com.apple.security.app-sandbox</key>
+    <true/> -->
+
+    <!-- JIT 컴파일을 허용합니다. 이는 런타임 시 코드를 컴파일하는 기능으로, 일부 애플리케이션에서 성능 향상을 위해 필요합니다. -->
+    <key>com.apple.security.cs.allow-jit</key>
+    <true/>
+
+    <!-- 서명되지 않은 실행 가능 메모리의 생성을 허용합니다. 이는 보안 리스크가 될 수 있으므로 신중하게 사용해야 합니다. -->
+    <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+    <true/>
+
+    <!-- 실행 가능 페이지 보호 기능을 비활성화합니다. 이 기능은 일반적으로 메모리의 일부를 코드 실행을 위해 보호하는 데 사용됩니다. -->
+    <key>com.apple.security.cs.disable-executable-page-protection</key>
+    <true/>
+
+    <!-- 동적 라이브러리에 대한 라이브러리 검증을 비활성화합니다. 이는 애플리케이션이 서명되지 않은 라이브러리를 로드할 수 있게 합니다. -->
+    <key>com.apple.security.cs.disable-library-validation</key>
+    <true/>
+
+    <!-- 동적 링커(dyld) 환경 변수의 사용을 허용합니다. 이는 라이브러리 로딩과 관련된 환경 변수를 설정하는 데 사용됩니다. -->
+    <key>com.apple.security.cs.allow-dyld-environment-variables</key>
+    <true/>
+</dict>
+</plist>
