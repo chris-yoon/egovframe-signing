@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # 개발자 ID 및 인증 정보
-DEVELOPER_ID="Developer ID Application: Yongho Shin (A6KB99G48Z)"
-APPLE_ID="egovdpit@gmail.com"
-APPLE_PASSWORD="qeet-zrtu-knkd-ckop"
-TEAM_ID="A6KB99G48Z"
+DEVELOPER_ID="Developer ID Application: {개발자 이름} ({TEAM_ID})"
+APPLE_ID="{APPLE_ID}"
+APPLE_PASSWORD="{APP_SPECIFIC_PASSWORD}"
+TEAM_ID="{TEAM_ID}"
 
 # 앱 정보
 APP_NAME="eGovFrameDev-4.3.0-Mac-AArch64.app"

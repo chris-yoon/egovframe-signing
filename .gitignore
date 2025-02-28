@@ -1,0 +1,13 @@
+# Logs directory
+/logs/
+*.log
+
+# Temporary directories and files
+/extracted*/
+/backups*/
+/temp_work_dir*/
+/dmg_temp/
+
+# Build artifacts
+*.app
+*.dmg
