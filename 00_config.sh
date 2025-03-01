@@ -54,12 +54,6 @@ INNER_JAR_PATHS=(
     "dependency/jna-5.8.0.jar"
 )
 
-JNI_PATHS=(
-    "com/sun/jna/darwin-aarch64/libjnidispatch.jnilib"
-    "com/sun/jna/darwin-x86-64/libjnidispatch.jnilib"
-    "com/sun/jna/darwin/libjnidispatch.jnilib"
-)
-
 # 작업 디렉토리
 WORK_DIR="temp_work_dir"
 

@@ -1,6 +1,6 @@
 # eGovFrame CodeSign Scripts
 
-macOS용 전자정부 프레임워크 개발환경(`eGovFrameDev-4.3.0-Mac-AArch64.app`)의 코드 서명 및 공증을 자동화하는 스크립트입니다.
+macOS용 전자정부 표준프레임워크 개발환경(`eGovFrameDev-4.3.0-Mac-AArch64.app`)의 코드 서명 및 공증을 자동화하는 스크립트입니다.
 
 ## 기능
 
@@ -38,15 +38,27 @@ APP_BUNDLE_ID="org.egovframe.platform.ide"
 ## 실행 방법
 
 1. 서명할 애플리케이션을 프로젝트 루트 디렉토리에 복사합니다.
-2. 기존 작업 파일 정리:
-```bash
-./clean.sh
-```
 
-3. 스크립트 실행:
+2. 스크립트 실행 (옵션은 선택사항):
 ```bash
+# 앱 서명까지만 실행
+./run.sh --sign-only
+
+# DMG 생성까지 실행
+./run.sh --with-dmg
+
+# 노타리까지 모두 실행 (기본값)
+./run.sh --full
+# 또는
 ./run.sh
 ```
+
+### 실행 옵션
+
+- `--sign-only`: JAR 파일 처리 및 앱 서명까지만 실행
+- `--with-dmg`: DMG 생성까지 실행
+- `--full`: 노타리까지 모든 과정 실행 (기본값)
+- `--help` 또는 `-h`: 사용법 출력
 
 ## 스크립트 구성
 
@@ -78,6 +90,7 @@ APP_BUNDLE_ID="org.egovframe.platform.ide"
 
 - 실행 로그: `./logs/run_[timestamp].log`
 - 정리 작업 로그: `./logs/clean_[timestamp].log`
+- 노타리 제출 로그: `./logs/notary_output_[timestamp].log`
 
 ## 주의사항
 
@@ -93,7 +106,7 @@ APP_BUNDLE_ID="org.egovframe.platform.ide"
 ├── 02_sign_native_libraries.sh  # 라이브러리 서명 스크립트
 ├── 03_repackage_jars.sh   # JAR 재패키징 스크립트
 ├── 04_sign_nested_jars.sh # 중첩 JAR 처리 스크립트
-├── 05_create_dmg.sh       # DMG 생성 스���립트
+├── 05_create_dmg.sh       # DMG 생성 스크립트
 ├── run.sh                 # 메인 실행 스크립트
 ├── clean.sh              # 정리 스크립트
 ├── logs/                 # 로그 파일 디렉토리
